@@ -57,7 +57,11 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "core_apps.users",
-    "core_apps.profiles"
+    "core_apps.profiles",
+    "core_apps.issues",
+    "core_apps.posts",
+    "core_apps.ratings",
+    "core_apps.common"
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -140,7 +144,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Europe/Germany'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 

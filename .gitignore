@@ -4,6 +4,7 @@
 staticfiles/
 envs/*
 !envs/.env.example
+command.txt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,5 +1,5 @@
 -r base.txt
 
-psycopg2-binary=2.9.9
-watchfiles=0.24.0 
-black=24.8.0
+psycopg2-binary==2.9.9
+watchfiles==0.24.0 
+black==24.8.0
