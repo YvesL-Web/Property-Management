@@ -1,4 +1,4 @@
-FROM docker.io/python:3.10.15-slim-bookworm as python 
+FROM docker.io/python:3.10.15-slim-bookworm AS python 
 
 # Stage 1: Build our dependency wheels
 FROM python AS python-build-stage
