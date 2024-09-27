@@ -8,3 +8,4 @@ class ApartmentAdmin(admin.ModelAdmin):
     list_filter=["unit_number"]
     ordering=["building","floor"]
     autocomplete_fields=["tenant"]
+    search_fields = ["unit_number"]
