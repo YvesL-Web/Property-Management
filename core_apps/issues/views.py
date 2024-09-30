@@ -136,7 +136,7 @@ class IssueUpdateAPIView(generics.UpdateAPIView):
 
         if not (user.is_staff or user == issue.assigned_to):
             logger.warning(f"Unauthorized issue status update attempt by user {user.get_full_name} on issue {issue.title} ")
-            raise PermissionDenied("You do not have permisson to update the issue.")
+            raise PermissionDenied("You do not have permission to update the issue.")
         
         send_issue_resolved_email(issue)
 
