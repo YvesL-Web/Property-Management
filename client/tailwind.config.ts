@@ -9,7 +9,41 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
-			colors: {},
+			container: {
+				center: true,
+				padding: "2rem",
+				screens: {
+					"2xl": "1400px",
+				},
+			},
+			colors: {
+				googleBlue: "#4285F4",
+				asparagus: "#60992D",
+				deepBlueGrey: "#263238",
+				gray: "rgba(125,144,201,0.34)",
+				lightGray: "#7B8EC8",
+				electricIndigo: "#6610F2",
+				richBlack: "#0D1317",
+				veryBlack: "#000000",
+				babyPowder: "#FBFEF9",
+				pumpkin: "#F17105",
+				buff: "#DC9E82",
+				platinum: "#DDE1E4",
+				lightGrey: "#EEEEEE",
+				pear: "#C2E812",
+				eerieBlack: "#171D1C",
+				ballonWhite: "#dfe6f6",
+			},
+			keyframes: {
+				"accordion-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: "0" },
+				},
+			},
 			borderRadius: {},
 			animation: {
 				"accordion-down": "accordion-dow 0.2s ease-out",
