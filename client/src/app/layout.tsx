@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 import { robotoMono,openSans, robotoSlab } from "@/lib/fonts";
+import ThemeProvider from "@/components/theme-provider";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -26,11 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${robotoMono.variable} ${robotoSlab.variable} ${openSans.variable}  antialiased`}
-			>
-				{children}
+				className={`${robotoMono.variable} ${robotoSlab.variable} ${openSans.variable}  antialiased`}>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+					{children}
+				</ThemeProvider>
 			</body>
 		</html>
 	);
