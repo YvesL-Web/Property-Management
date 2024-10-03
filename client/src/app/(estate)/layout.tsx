@@ -7,7 +7,7 @@ interface LayoutProps {
 
 const layout = ({children}: LayoutProps) => {
   return (
-		<main className="bg-platinum relative">
+		<main className="bg-baby_rich relative">
 			<Navbar />
 			<div className="flex">
 				{/* Placeholder left navbar component */}
