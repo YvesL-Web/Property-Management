@@ -2,8 +2,10 @@ import React from "react";
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
-import { robotoMono,openSans, robotoSlab } from "@/lib/fonts";
+import { robotoMono, openSans, robotoSlab } from "@/lib/fonts";
 import ThemeProvider from "@/components/theme-provider";
+
+import ReduxProvider from "@/lib/redux/provider";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -17,22 +19,30 @@ import ThemeProvider from "@/components/theme-provider";
 // });
 
 export const metadata: Metadata = {
-  title: "Home | AMA Apartments",
-  description: "Welcome Home",
+	title: "Home | AMA Apartments",
+	description: "Welcome Home",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
+	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${robotoMono.variable} ${robotoSlab.variable} ${openSans.variable}  antialiased`}>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-					{children}
-				</ThemeProvider>
+				className={`${robotoMono.variable} ${robotoSlab.variable} ${openSans.variable}  antialiased`}
+			>
+				<ReduxProvider>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						{children}
+					</ThemeProvider>
+				</ReduxProvider>
 			</body>
 		</html>
 	);
