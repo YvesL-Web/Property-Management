@@ -6,6 +6,7 @@ import { robotoMono, openSans, robotoSlab } from "@/lib/fonts";
 import ThemeProvider from "@/components/theme-provider";
 
 import ReduxProvider from "@/lib/redux/provider";
+import Toast from "@/components/shared/Toast";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,7 @@ export default function RootLayout({
 			<body
 				className={`${robotoMono.variable} ${robotoSlab.variable} ${openSans.variable}  antialiased`}
 			>
+				<Toast/>
 				<ReduxProvider>
 					<ThemeProvider
 						attribute="class"
