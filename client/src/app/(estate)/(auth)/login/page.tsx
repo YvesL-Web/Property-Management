@@ -1,5 +1,13 @@
 import { AuthFormHeader, LoginForm } from "@/components/forms/auth";
 
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "AMA Apartments | Login",
+	description: "Login page",
+};
+
 const LoginPage = () => {
 	return (
 		<div>
