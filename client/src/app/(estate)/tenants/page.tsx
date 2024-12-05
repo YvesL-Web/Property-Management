@@ -1,9 +1,10 @@
 "use client"
 
+import ProtectedRoute from "@/components/shared/ProtectedRoutes"
 import Spinner from "@/components/shared/Spinner"
 import { useGetAllUsersQuery } from "@/lib/redux/features/users/usersApiSlice"
 
-const TenantsPage = () => {
+function TenantsPageContent(){
     const {data, isLoading} = useGetAllUsersQuery({}) 
     
     if(isLoading){
@@ -26,4 +27,11 @@ const TenantsPage = () => {
         </div>
     )
 }
-export default TenantsPage
+
+export default function TenantsPage(){
+    return (
+        <ProtectedRoute>
+            <TenantsPageContent />
+        </ProtectedRoute>
+    )
+}

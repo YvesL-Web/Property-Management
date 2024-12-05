@@ -2,6 +2,8 @@ import clsx from "clsx"
 import { useTheme } from "next-themes"
 import Image from "next/image"
 
+import loadingDark from "@/assets/icons/loading-dark.svg"
+import loadingLight from "@/assets/icons/loading-light.svg"
 
 interface SpinnerProps {
     size?: "sm"|"md"|"lg"|"xl"
@@ -13,7 +15,6 @@ const sizeClasses = {
     lg: "size-32",
     xl: "size-52",
 }
-
 
 
 const Spinner = ({size="md"}: SpinnerProps) => {
@@ -32,8 +33,8 @@ const Spinner = ({size="md"}: SpinnerProps) => {
 
     const spinnerSrc =
         theme === "dark"
-            ? "/assets/icons/loading-dark.svg"
-            : "/assets/icons/loading-light.svg";
+            ? loadingDark
+            : loadingLight
 
   return (
     <div role="status">
