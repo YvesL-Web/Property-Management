@@ -2,6 +2,7 @@ import { HomeModernIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
 import ThemeSwitcher from "./ThemeSwitcher";
 import MobileNavbar from "./MobileNavbar";
+import AuthAvatar from "@/components/shared/navbar/AuthAvatar";
 
 const Navbar = () => {
   return (
@@ -16,6 +17,7 @@ const Navbar = () => {
 			<div className="flex items-center gap-4 sm:gap-6 lg:gap-8">
 				{/* placeholder theme switcher component */}
 				<ThemeSwitcher />
+				<AuthAvatar />
 				{/* placeholder theme switcher component */}
 				<MobileNavbar />
 			</div>
