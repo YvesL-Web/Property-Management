@@ -12,7 +12,7 @@ import { useTheme } from "next-themes";
 const themeOptions = [
 	{ value: "light", label: "Light" },
 	{ value: "dark", label: "Dark" },
-	{ value: "system", label: "System" },
+	// { value: "system", label: "System" },
 ];
 
 const ThemeSwitcher = () => {
