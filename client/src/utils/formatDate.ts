@@ -35,5 +35,5 @@ export function formatDate(dateString: string | undefined): string {
                 return "th";
         }
     }
-    return `${monthNames[monthIndex]} ${day}${getOrdinalSuffix(day)} ${year}`
+    return `${day}${getOrdinalSuffix(day)} ${monthNames[monthIndex]} ${year}`
 }

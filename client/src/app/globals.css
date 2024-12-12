@@ -111,6 +111,16 @@ body{
         filter: brightness(0) saturate(100%) invert(50%) sepia(34%) saturate(6182%) hue-rotate(6deg) brightness(102%) contrast(96%);
     }
 
+    .circle {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .bg-baby_rich{
         @apply bg-babyPowder dark:bg-richBlack;
     }

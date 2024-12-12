@@ -1,32 +1,22 @@
-"use client"
-
+import TenantCard from "@/components/cards/TenantCard"
 import ProtectedRoute from "@/components/shared/ProtectedRoutes"
-import Spinner from "@/components/shared/Spinner"
-import { useGetAllUsersQuery } from "@/lib/redux/features/users/usersApiSlice"
+import { Metadata } from "next"
+
+
+export const metadata: Metadata = {
+    title: "AMA Apartments | Tenants",
+    description: "Authenticated users can view basic information about other tenants within the property. Tenants can also search for other tenants. "
+}
 
 function TenantsPageContent(){
-    const {data, isLoading} = useGetAllUsersQuery({}) 
-    
-    if(isLoading){
-        return (
-          <div className="flex-center pt-32">
-            <Spinner size="xl"/>
-          </div>
-        )
-    }
-    return(
+    return (
         <div>
-            <h1 className="dark:text-pumpkin text-6xl">Tenants</h1>
-            {data && data.profiles.results.length > 0 ? (
-                data.profiles.results.map((tenant) => (
-                    <p key={tenant.id}  className="text-2xl dark:text-lime-500">
-                        {tenant.full_name} - {tenant.occupation}
-                    </p>
-                ))
-            ) : (<p>No tenants found.</p>)}
+            <TenantCard />
         </div>
     )
 }
+
+
 
 export default function TenantsPage(){
     return (
