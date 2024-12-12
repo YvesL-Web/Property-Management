@@ -24,11 +24,17 @@ import {
 import { formatDate } from "@/utils";
 import ProtectedRoute from "../shared/ProtectedRoutes";
 import { useAppSelector } from "@/lib/redux/hooks/typedHooks";
+import PaginationSection from "../shared/PaginationSection";
 
 function TenantCardContent() {
 	const { theme } = useTheme();
 	const searchTerm = useAppSelector((state) => state.user.searchTerm)
-	const { data, isLoading } = useGetAllUsersQuery({searchTerm});
+	const page = useAppSelector((state) => state.user.page)
+
+	const { data, isLoading } = useGetAllUsersQuery({searchTerm, page});
+
+	const totalCount = data?.profiles.count || 0
+	const totalPages = Math.ceil(totalCount / 9)
 
 	if (isLoading) {
 		return (
@@ -115,6 +121,7 @@ function TenantCardContent() {
 					<p>No tenants found.</p>
 				)}
 			</div>
+			<PaginationSection totalPages={totalPages} />
 		</div>
 	);
 }
