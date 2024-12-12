@@ -26,8 +26,8 @@ const PaginationSection = ({ totalPages }: PaginationSectionProps) => {
 	};
 
 	return (
-		<Pagination className="bg-platinum dark:bg-eerieBlack dark:text-platinum mt-4 rounded-full">
-			<PaginationContent>
+		<Pagination className=" bg-platinum dark:bg-eerieBlack dark:text-platinum mt-4 rounded-full">
+			<PaginationContent className="my-2">
 				{currentPage === 1 ? null : (
 					<PaginationItem className="cursor-pointer">
 						<PaginationPrevious onClick={handlePreviousClick} />
