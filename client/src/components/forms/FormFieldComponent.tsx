@@ -87,7 +87,7 @@ const FormFieldComponent = <TFieldValues extends FieldValues>({
 				{link && (
 					<Link
 						href={link.linkUrl}
-						className="hover:text-indigo-500 dark:text-lime-500 dark:hover:text-indigo-500"
+						className="h4-semibold cursor-pointer hover:text-indigo-500 dark:text-lime-500 dark:hover:text-indigo-500"
 					>
 						{link.linkText}
 					</Link>

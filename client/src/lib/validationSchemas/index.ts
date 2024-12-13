@@ -15,3 +15,9 @@ export type { TProfileSchema } from "./ProfileSchema";
 
 export { apartmentCreateSchema } from "./ApartmentCreateSchema";
 export type { TApartmentCreateSchema } from "./ApartmentCreateSchema";
+
+export { issueUpdateSchema} from "./IssueUpdateSchema"
+export type { TIssueUpdateSchema} from "./IssueUpdateSchema"
+
+export {issueCreateSchema} from "./IssueCreateSchema"
+export type {TIssueCreateSchema} from "./IssueCreateSchema"
