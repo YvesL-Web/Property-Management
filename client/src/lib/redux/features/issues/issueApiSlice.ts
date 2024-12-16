@@ -20,7 +20,7 @@ export const issueApiSlice = baseApiSlice.injectEndpoints({
 		}),
 		getMyIssues: builder.query<MyIssuesResponse, void>({
 			query: () => ({
-				url: "/issue/me/",
+				url: "/issues/me/",
 				method: "GET",
 			}),
 			providesTags: ["Issue"],
