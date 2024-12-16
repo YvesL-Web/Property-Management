@@ -8,9 +8,7 @@ import IssueCard from "../cards/IssueCard";
 const Issues = () => {
 	const { data, isLoading } = useGetMyIssuesQuery();
 	const myIssues = data?.my_issues;
-	console.log(myIssues);
 	
-
 	if (isLoading) {
 		return (
 			<div className="flex-center pt-32">

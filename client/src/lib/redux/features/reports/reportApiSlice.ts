@@ -17,7 +17,7 @@ export const reportApiSlice = baseApiSlice.injectEndpoints({
 		}),
 		getMyReport: builder.query<MyReportsResponse, void>({
 			query: () => ({
-				url: "/reports/me",
+				url: "/reports/me/",
 				method: "GET",
 			}),
 			providesTags: ["Report"],

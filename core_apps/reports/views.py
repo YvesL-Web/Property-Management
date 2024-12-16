@@ -19,7 +19,7 @@ class ReportCreateAPIView(generics.CreateAPIView):
 class ReportListAPIView(generics.ListAPIView):
     serializer_class = ReportSerializer
     renderer_classes = [GenericJSONRenderer]
-    object_label = "report"
+    object_label = "reports"
 
     def get_queryset(self):
         user = self.request.user

@@ -3,6 +3,7 @@ import AssignedIssues from "@/components/profile/AssignedIssues";
 import Header from "@/components/profile/Header";
 import Issues from "@/components/profile/Issues";
 import Posts from "@/components/profile/Posts";
+import Reports from "@/components/profile/Reports";
 import ProtectedRoute from "@/components/shared/ProtectedRoutes";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -49,6 +50,7 @@ function ProfilePageContent() {
 						{/* issues tab content */}
 						<Issues/>
 						{/* report tab content */}
+						<Reports/>
 						{/* assigned issues tab content */}
 						<AssignedIssues/>
 					</Tabs>
