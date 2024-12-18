@@ -24,3 +24,12 @@ export type {TIssueCreateSchema} from "./IssueCreateSchema"
 
 export {reportCreateSchema} from "./ReportCreateSchema"
 export type {TReportCreateSchema} from "./ReportCreateSchema"
+
+export {postSchema} from "./PostSchema"
+export type {TPostSchema} from "./PostSchema"
+
+export {replySchema} from "./PostReplySchema"
+export type {TReplySchema} from "./PostReplySchema"
+
+export {postUpdateSchema} from "./PostUpdateSchema"
+export type {TPostUpdateSchema} from "./PostUpdateSchema"
