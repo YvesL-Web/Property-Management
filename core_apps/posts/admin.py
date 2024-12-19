@@ -10,7 +10,7 @@ from .models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ["title","tag_list","get_total_views"]
+    list_display = ["title","tag_list","get_total_views", "created_at"]
     inlines = [ContentViewInline]
 
     def get_total_views(self, obj):
