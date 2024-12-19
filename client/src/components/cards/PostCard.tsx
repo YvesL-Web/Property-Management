@@ -28,7 +28,7 @@ const PostCard = () => {
 	const { data, isLoading } = useGetAllPostsQuery({ page });
 
 	const totalCount = data?.posts.count || 0;
-	const totalPages = Math.ceil(totalCount / 9);
+	const totalPages = Math.ceil(totalCount / 3);
 
 	const sortedPosts = sortByDateDescending(
 		data?.posts.results ?? [],
